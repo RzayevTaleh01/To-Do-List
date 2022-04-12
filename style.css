@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+}
+
+body {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+}
+
+a {
+      text-decoration: none;
+}
+
+button {
+      border: none;
+      cursor: pointer;
+}
+
+main {
+      border: 1px solid #C4C4C4;
+      border-radius: 10px;
+      max-width: min-content;
+      position: relative;
+      padding: 50px;
+
+}
+
+main .todo {
+      text-align: center;
+      width: 95%;
+}
+
+main .todo .icons {
+      position: relative;
+      margin-bottom: 30px;
+}
+
+main .todo a:first-child img {
+      width: fit-content;
+      position: absolute;
+      right: 10px;
+}
+
+main .todo  a:last-child img {
+      width: fit-content;
+      position: absolute;
+      right: 45px;
+      top: -2px;
+}
+
+main .todo-head {
+      background-color: #FFDC40;
+      position: absolute;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      height: 28px;
+      width: 100.5%;
+      top: -1px;
+      left: -1px;
+}
+
+main .todo-body h1 {
+      font-size: 26px;
+      font-weight: 900;
+}
+
+main .todo-body form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+}
+
+main .todo-body form input {
+      width: 300px;
+      padding: 10px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid #c4c4c4;
+}
+
+main .todo-body form input:focus {
+      outline: none;
+}
+
+
+main .todo-body form button {
+      width: max-content;
+      height: 42px;
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 71px;
+      position: relative;
+      background-color: #833AE0;
+      font-weight: 400;
+      font-size: 18px;
+}
+
+main .todo-body form button span {
+      border-radius: 50%;
+      background-color: #9953F1;
+      padding: 10px 17px;
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+main .todo-body form button p {
+      margin-left: 20px;
+}
+
+main .todo-body form ul{
+      list-style: none;
+      width: 300px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #c4c4c4;
+}
+main .todo-body form ul li{
+      position: relative;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      text-align: left;
+}
+main .todo-body form ul li:last-child{
+      margin-bottom: 0;
+}
+main .todo-body form ul img.x-btn{
+      position: absolute;
+      right: 10px;
+}
