@@ -1,8 +1,8 @@
-# Algoritmika BootCamp Final Project №2 - JavaScript TodoList
-
-## Tasks
-
-# Figma Design
-https://www.figma.com/file/KsxpDgPhRS3zEmuGx8qcKk/PTM2--Todo-list?node-id=0%3A1
-# Online Demo
+# 💡 Algoritmika BootCamp Final Project №2 - JavaScript TodoList
+A simple ToDo List webapp created using JavaScript, HTML & CSS.
+## 📝 Instructions
+https://bit.ly/taskrules
+## 🎯 Figma Design
+https://bit.ly/figmatemplate
+## 🌎 Live Preview
 https://js-project-todo.netlify.app/
