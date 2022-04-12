@@ -140,4 +140,7 @@ main .todo-body form ul img.x-btn{
       main .todo-body form input {
             width: 260px;
       }
+      main .todo-body form ul{
+            width: 260px;
+      }
 }
