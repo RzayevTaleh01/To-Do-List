@@ -135,3 +135,9 @@ main .todo-body form ul img.x-btn{
       position: absolute;
       right: 10px;
 }
+
+@media (max-width: 900px) { 
+      main .todo-body form input {
+            width: 260px;
+      }
+}
