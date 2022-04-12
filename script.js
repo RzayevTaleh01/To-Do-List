@@ -12,7 +12,7 @@ eventListeners();
 
 function checkList() {
   if (taskList.children.length == 0) {
-    taskList.style.display = 'none';
+    taskList.style.display = "none";
   }
 }
 
@@ -27,8 +27,7 @@ function eventListeners() {
   form.addEventListener("submit", addNewItem);
   taskList.addEventListener("click", deleteItem);
   btnDeleteAll.addEventListener("click", deleteAllItems);
-  sort.addEventListener("click", sortList);
-
+  sort.addEventListener("click", sortListDir);
 }
 
 function createItem(text) {
@@ -97,20 +96,46 @@ function deleteItemFromLS(text) {
   });
   localStorage.setItem("items", JSON.stringify(items));
 }
-function sortList() {
-  if (icon == false) {
-    icon = true;
-    document.querySelector(".sort").innerHTML ='<img src="./img/sort-icon-2.svg"/ class="sort-icon">';
-  }
-  else{
-    icon = false;
-    document.querySelector(".sort").innerHTML ='<img src="./img/sort-icon-1.svg"/ class="sort-icon">';
-  }
-  sortArr = taskList.querySelectorAll("li");
-  console.log(sortArr);
 
-  for (let i = sortArr.length - 1; i >= 0; i--) {
-    taskList.append(sortArr[i]);
+function sortListDir() {
+  let i,
+    switching,
+    b,
+    shouldSwitch,
+    dir,
+    switchcount = 0;
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    b = taskList.getElementsByTagName("LI");
+    for (i = 0; i < b.length - 1; i++) {
+      shouldSwitch = false;
+      if (dir == "asc") {
+        if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+          document.querySelector(".sort").innerHTML =
+            '<img src="./img/sort-icon-2.svg"/ class="sort-icon">';
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (b[i].innerHTML.toLowerCase() < b[i + 1].innerHTML.toLowerCase()) {
+          document.querySelector(".sort").innerHTML =
+            '<img src="./img/sort-icon-1.svg"/ class="sort-icon">';
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
   }
-
 }
