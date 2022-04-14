@@ -48,10 +48,10 @@ function addNewItem(e) {
     createItem(input.value);
     setItemToLS(input.value);
     input.value = "";
-    e.preventDefault();
   } else {
     alert("Xananı doldurun!");
   }
+  e.preventDefault();
 }
 function deleteItem(e) {
   console.log(e.target.className);

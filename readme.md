@@ -1,4 +1,6 @@
-# 💡 Algoritmika BootCamp Final Project №2 - JavaScript TodoList
+# 💡 Algoritmika BootCamp Final Project №2
+
+## 💻 JavaScript TodoList
 A simple ToDo List webapp created using JavaScript, HTML & CSS.
 ## 📝 Instructions
 https://bit.ly/taskrules

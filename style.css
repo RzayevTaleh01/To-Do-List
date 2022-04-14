@@ -121,6 +121,7 @@ main .todo-body form ul{
       padding: 10px;
       border-radius: 10px;
       border: 1px solid #c4c4c4;
+      word-break: break-all;
 }
 main .todo-body form ul li{
       position: relative;
